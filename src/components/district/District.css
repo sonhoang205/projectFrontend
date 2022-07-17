@@ -1,5 +1,28 @@
 .district {
-    width: 200px;
-    height: 600px;
+    width: 300px;
+    height: 850px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
 
+.text {
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100px;
+    font-weight: 600;
+    z-index: 9;
+    position: absolute;
+    top: 30px;
+    max-width: 100%;
+color: rgb(65, 113, 156);
+flex-wrap: wrap;
+
+}
+.image{
+    opacity: 0.7;
+  filter: alpha(opacity=50);
 }

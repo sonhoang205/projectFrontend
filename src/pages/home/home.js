@@ -1,6 +1,7 @@
 import React from "react";
 import District from "../../components/district/district";
 import './home.css'
+import DenseAppBar from "./navbar";
 const Home = ()=>{
     
     const districtData = [
@@ -44,9 +45,18 @@ const Home = ()=>{
     }
 
     return(
+        <>
+        <header className="header" style={{
+            position: "fixed",
+            width:'100%',
+            zIndex:'10'
+        }}>
+            <DenseAppBar/>
+        </header>
         <div className="container">
             {renderDistrict()}
         </div>
+        </>
     )
 }
 export default Home

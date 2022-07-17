@@ -8,12 +8,12 @@ const District =  (props) => {
     
     return(
         <div className="district" >
-            <img src={imageURL} alt='' style={{
-                height:"600px",
-                width: "200px",
+            <img className="image" src={imageURL} alt='' style={{
+                height:"850px",
+                width: "300px",
                 objectFit:"cover"
             }}></img>
-            <p>{name}</p>
+            <p class="text">{name}</p>
         </div>
     )
 }
