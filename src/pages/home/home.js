@@ -2,61 +2,94 @@ import React from "react";
 import District from "../../components/district/district";
 import './home.css'
 import DenseAppBar from "./navbar";
-const Home = ()=>{
-    
+const Home = () => {
+
     const districtData = [
         {
-            name:'Hoàn Kiếm',
-            imageURL: 'https://luatvietan.vn/wp-content/uploads/2021/10/Hoan-Kiem.jpg'},
+            name: 'Hoàn Kiếm',
+            backgroundColor: "rgb(143, 149, 211)",
+            color: "rgb(62, 76, 230)"
+        },
         {
-            name:'Hai Bà Trưng',
-            imageURL: 'https://image.nhadatmoi.net/tin-tuc/wp-content/uploads/2021/07/07170503/kho-bac-nha-nuoc-quan-hai-ba-trung-5-1024x576.jpg'},
+            name: 'Hai Bà Trưng',
+            backgroundColor: "rgb(160, 161, 215)",
+            color: "rgb(85, 80, 215)"
+        },
         {
-            name:'Hoàng Mai',
-            imageURL: 'https://maisonoffice.vn/wp-content/uploads/2021/09/tong-quan-thi-truong-van-phong-cho-thue-quan-hoang-mai.jpg'},
+            name: 'Hoàng Mai',
+            backgroundColor: "rgb(177, 173, 219)",
+            color: "rgb(108, 83, 199)"
+        },
         {
-            name:'Tây Hồ',
-            imageURL: 'https://vivuhotay.com/wp-content/uploads/2021/03/duong-Trich-Sai-Meat-Plus-Ho-Tay.jpg'},
+            name: 'Tây Hồ',
+            backgroundColor: "rgb(194, 185, 223)",
+            color: "rgb(131, 87, 183)"
+        },
         {
-            name:'Cầu Giấy',
-            imageURL: 'https://nld.mediacdn.vn/291774122806476800/2021/5/25/img6467112-16219297451421931194310.jpg',},
+            name: 'Cầu Giấy',
+            backgroundColor: "rgb(211, 196, 227)",
+            color: "rgb(154, 90, 167)"
+        },
         {
-            name:'Hà Đông',
-            imageURL: 'https://upload.wikimedia.org/wikipedia/commons/3/31/Ga_H%C3%A0_%C4%90%C3%B4ng.jpg',},
+            name: 'Hà Đông',
+            backgroundColor: "rgb(213, 192, 218)",
+            color: "rgb(177, 94, 151)"
+        },
         {
-            name:'Thanh Xuân',
-            imageURL:  'https://luxhomes.vn/xmedia/2019/12/cong-vinhomes-royal-city.jpg',},
+            name: 'Thanh Xuân',
+            backgroundColor: "rgb(215, 187, 208)",
+            color: "rgb(200, 97, 135)"
+        },
         {
-            name:'Đống Đa',
-            imageURL: 'https://quanlykhachsan.edu.vn/wp-content/uploads/2021/12/du-lich-quan-dong-da-van-mieu-quoc-tu-giam.jpg',},
+            name: 'Đống Đa',
+            backgroundColor: "rgb(217, 182, 198)",
+            color: "rgb(223, 100, 119)"
+        },
         {
-            name:'Ba Đình',
-            imageURL: 'https://vcdn1-dulich.vnecdn.net/2015/08/31/2-BaDinh-08-1440985910.jpg?w=1200&h=0&q=100&dpr=1&fit=crop&s=NawiDE0y7o_vBV_yLOoB8w'},
+            name: 'Ba Đình',
+            backgroundColor: "rgb(219, 177, 188)",
+            color: "rgb(245, 103, 103)"
+        },
     ]
-    const renderDistrict = () =>{
-        return(
+    const renderDistrict = () => {
+        return (
             <>
-                {districtData.map((data)=>{
-                    return(
-                        <District name={data.name} imageURL={data.imageURL}/>
-                    )})}
+                {districtData.map((data) => {
+                    return (
+                        <District name={data.name} color={data.color} backgroundColor={data.backgroundColor} />
+                    )
+                })}
             </>
         )
     }
 
-    return(
-        <>
-        <header className="header" style={{
+    return (
+        <div className="document">
+            {/* <header className="header" style={{
             position: "fixed",
             width:'100%',
             zIndex:'10'
         }}>
             <DenseAppBar/>
-        </header>
-        <div className="container">
-            {renderDistrict()}
+        </header> */}
+            <div className="header">
+                <div className="navbar">
+                    <div className="title">
+                        Hôm Nay Ăn Gì?
+                    </div>
+                    <div className="authentication">
+                        <button className="sign-up">Sign Up</button>
+                        <button className="sign-in">Sign In</button>
+                    </div>
+                </div>
+                <div className="note">
+                    Chọn một nơi bạn muốn đi
+                </div>
+            </div>
+            <div className="container">
+                {renderDistrict()}
+            </div>
         </div>
-        </>
     )
 }
 export default Home

@@ -1,7 +1,80 @@
 .container{
     display: flex;
     flex-direction: row;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+}
+html, body{
+    height: 100%;
+    margin: 0;
+}
+.header{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    position: fixed;
+    align-items: center;
+    height: 100px;
+}
+.document{
+    height: 100%;
+    margin: 0;
 }
 .home-district{
     margin-left: 20px;
+}
+.navbar{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    background-color: white;
+}
+.title{
+    font-size: 25px;
+    font-weight: 600;
+    margin-left: 50px;
+}
+.authentication{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
+}
+.sign-in{
+    width: 70px;
+    height: 40px;
+    background-color: rgb(58, 163, 255);
+    font-size: 15px;
+    font-weight: 600;
+    border: 0;
+    border-radius:5px ;
+    color: white;
+    margin-left: 30px;
+}
+.sign-up{
+    width: 70px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 600;
+    border: 0;
+    border-radius:5px ;
+}
+.sign-in,.sign-up:hover{
+    cursor: pointer;
+}
+.note{
+
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(212, 74, 74);
+    border-radius: 10px;
+    border: 1rem;
 }
