@@ -8,8 +8,8 @@ const District = (props) => {
     const { name, color, backgroundColor } = props;
     let navigate = useNavigate();
     const handleChangeDistrict = () => {
-        console.log('onChange')
-        console.log(name)
+        // console.log('onChange')
+        // console.log(name)
 
         navigate("/district", { state: name })
     }

@@ -8,7 +8,7 @@
     padding: 20px;
     font-family: Arial, Helvetica, sans-serif;
 }
-.tag-container:hover{
+.tag-icon,.tag-title:hover{
 cursor: pointer;
 }
 .tag-icon{

@@ -29,14 +29,15 @@ const Filter = () => {
         navigate("/login")
     }
     const location = useLocation();
+
     console.log(location.state)
     const renderTags = () => {
         return (
             <>
                 {tags.map((data) => {
-                    console.log(data.icon);
+                    // console.log(data.icon);
                     return (
-                        <Tags name={data.type} key={data.type} symbol={data.icon}/>
+                        <Tags name={data.type} key={data.type} symbol={data.icon} district={location.state}/>
                     )
                 })}
             </>
@@ -68,9 +69,9 @@ const Filter = () => {
             <div className="filter-container">
                 {renderTags()}
             </div>
-            <div className="filter-btn">
+            {/* <div className="filter-btn">
             <button className='filter-random'>Random</button>
-            </div>
+            </div> */}
         </div>
     )
 }

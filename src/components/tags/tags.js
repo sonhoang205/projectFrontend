@@ -7,10 +7,11 @@ const Tags = (proms) => {
 
     const navigate = useNavigate();
     const handleChangeFilter = ()=>{
-        navigate("/result")
+        navigate("/result", {state: {type:name,district:district }});
+
     }
-    const { name, symbol } = proms;
-    console.log(name, symbol);
+    const { name, symbol, district } = proms;
+    // console.log(name, symbol);
     return (
         <>
             <div className="tag-container" id={`tag ${name}`} onClick={handleChangeFilter}>

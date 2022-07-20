@@ -19,7 +19,7 @@
     font-weight: 600;
     word-break:normal;
 }
-.districtIcon:hover{
+.districtIcon, .districtTitle:hover{
     cursor: pointer;
 }
 .districtTitle{
