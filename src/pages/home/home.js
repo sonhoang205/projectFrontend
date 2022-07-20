@@ -1,7 +1,8 @@
 import React from "react";
 import District from "../../components/district/district";
 import './home.css'
-import DenseAppBar from "./navbar";
+import { useNavigate } from "react-router-dom";
+
 const Home = () => {
 
     const districtData = [
@@ -51,20 +52,30 @@ const Home = () => {
             color: "rgb(245, 103, 103)"
         },
     ]
+    // route 
+    
+    const navigate = useNavigate();
+    const handleClickSignIn =()=>{
+        navigate("/login")
+    }
+    const handleClickHome =()=>{
+        navigate("/")
+    }
+    
     const renderDistrict = () => {
         return (
             <>
                 {districtData.map((data) => {
                     return (
-                        <District name={data.name} color={data.color} backgroundColor={data.backgroundColor} />
+                        <District name={data.name} color={data.color} backgroundColor={data.backgroundColor} key={data.name} />
                     )
                 })}
             </>
         )
     }
-
+    
     return (
-        <div className="document">
+        <div className="homeDocument">
             {/* <header className="header" style={{
             position: "fixed",
             width:'100%',
@@ -72,21 +83,21 @@ const Home = () => {
         }}>
             <DenseAppBar/>
         </header> */}
-            <div className="header">
-                <div className="navbar">
-                    <div className="title">
+            <div className="homeHeader">
+                <div className="homeNavbar">
+                    <div className="homeTitle" onClick={handleClickHome}>
                         Hôm Nay Ăn Gì?
                     </div>
-                    <div className="authentication">
-                        <button className="sign-up">Sign Up</button>
-                        <button className="sign-in">Sign In</button>
+                    <div className="homeAuthentication">
+                        <button className="homeSignUp">Sign Up</button>
+                        <button className="homeSignIn" onClick={handleClickSignIn}>Sign In</button>
                     </div>
                 </div>
-                <div className="note">
+                <div className="homeNote">
                     Chọn một nơi bạn muốn đi
                 </div>
             </div>
-            <div className="container">
+            <div className="homeContainer">
                 {renderDistrict()}
             </div>
         </div>

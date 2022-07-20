@@ -1,33 +1,31 @@
-.homeContainer{
+.filter-container{
     display: flex;
     flex-direction: row;
     font-family: Arial, Helvetica, sans-serif;
-    height: 70%;
+    height: 50%;
     width: 100%;
-    justify-content: baseline;
-    align-items: baseline;
-
+    justify-content: center;
+    align-items: center;
 }
 html, body{
     height: 100%;
     margin: 0;
 }
-.homeHeader{
+.filter-header{
     display: flex;
     width: 100%;
     flex-direction: column;
-    /* position: fixed; */
     align-items: center;
     height: 100px;
 }
-.homeDocument{
+.filter-document{
     height: 100%;
     margin: 0;
 }
-.homeDistrict{
+.filter-home-district{
     margin-left: 20px;
 }
-.homeNavbar{
+.filter-navbar{
     display: flex;
     width: 100%;
     flex-direction: row;
@@ -36,18 +34,18 @@ html, body{
     height: 70px;
     background-color: white;
 }
-.homeTitle{
+.filter-title{
     font-size: 25px;
     font-weight: 600;
     margin-left: 50px;
 }
-.homeAuthentication{
+.filter-authentication{
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: 50px;
 }
-.homeSignIn{
+.filter-sign-in{
     width: 70px;
     height: 40px;
     background-color: rgb(58, 163, 255);
@@ -58,7 +56,7 @@ html, body{
     color: white;
     margin-left: 30px;
 }
-.homeSignUp{
+.filter-sign-up{
     width: 70px;
     height: 40px;
     font-size: 15px;
@@ -66,10 +64,11 @@ html, body{
     border: 0;
     border-radius:5px ;
 }
-.homeSignIn,.homeSignUp,.homeTitle:hover{
+.filter-sign-in,.filter-sign-up,.filter-random, .filter-title:hover{
     cursor: pointer;
 }
-.homeNote{
+.filter-note{
+
     height: 60px;
     width: 100%;
     display: flex;
@@ -79,4 +78,20 @@ html, body{
     color: rgb(255, 255, 255);
     background-color: rgb(212, 74, 74);
     border: 1rem;
+}
+.filter-btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.filter-random{
+    width: 90px;
+    height: 40px;
+    background-color: rgb(58, 163, 255);
+    font-size: 15px;
+    font-weight: 600;
+    border: 0;
+    border-radius:5px ;
+    color: white;
+    /* margin-left: 30px; */
 }

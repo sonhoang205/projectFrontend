@@ -1,40 +1,28 @@
-.container {
-    width: 180%;
-    height: 100%;
-}
-
-
-.district {
-    width: 300px;
+.districtContainer {
+    width: 100%;
     height: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+
+}
+
+
+.districtIcon {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    border-radius: 5px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 80px;
     font-weight: 600;
     word-break:normal;
 }
-.district:hover{
+.districtIcon:hover{
     cursor: pointer;
 }
-
-.text {
-    width: 250px;
-    display: flex;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 80px;
-    font-weight: 600;
-    z-index: 9;
-    position: absolute;
-    top: 100px;
-    flex-wrap: wrap;
-    word-break:normal;
-
-}
-
-.image {
-    opacity: 0.7;
-    filter: alpha(opacity=50);
+.districtTitle{
+    font-size: 20px;
+    margin-top: 10px;
 }

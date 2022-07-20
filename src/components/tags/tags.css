@@ -1,0 +1,37 @@
+.tag-container{
+    width: 250px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.tag-container:hover{
+cursor: pointer;
+}
+.tag-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    background-color: rgba(195, 195, 195, 0.228);
+}
+.tag-title{
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    color: black;
+    justify-content: center;
+}
+/* .tagSymbol{
+    width:80px ;
+    height: 80px;
+} */
+img{
+    width: 50px;
+    height: 50px;
+}
