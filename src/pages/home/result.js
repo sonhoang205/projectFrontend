@@ -6,9 +6,16 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 const Result = () => {
     const [dishData, setDishData] = React.useState('')
+    const location = useLocation();
+    console.log(location.state)
 
     const fetchDish = async () => {
-        const res = await axios.get('http://localhost:6060/api/dish/search')
+        const res = await axios.get('http://localhost:6060/api/dish/search',{
+            params:{
+                district: location.state.district,
+                tags: location.state.tags
+            }
+        })
         // console.log( await res)
         setDishData(res.data.data.result)
 
@@ -29,12 +36,20 @@ const Result = () => {
     }
     const renderResultCard = () => {
 
-
+        if(dishData === undefined){
+            return (
+                <>
+                    <div className="result-card">
+                        <div className="result-name">Không có dữ liệu</div>
+                    </div>
+                </>
+            )
+        }
         if (dishData !== '') {
             return (
                 <>
                     <div className="result-card">
-                        <img className="result-img" src={dishData.img}></img>
+                        <img className="result-img" src={dishData.img} alt='Mon an'></img>
                         <div className="result-name">{dishData.name}</div>
                         <div className="result-address">{dishData.address}</div>
                     </div>
@@ -50,8 +65,7 @@ const Result = () => {
         )
     }
 
-    // const location = useLocation();
-    // console.log(location.state)
+
 
 
     return (

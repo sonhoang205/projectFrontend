@@ -1,7 +1,7 @@
 import React from "react";
 import './tags.css'
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
+
 
 
 const Tags = (proms) => {
@@ -21,7 +21,7 @@ const Tags = (proms) => {
     const navigate = useNavigate();
     const handleChangeFilter = async()=>{
         // await fetchDish()
-        navigate("/result", {state: {type:name,district:district, }});
+        navigate("/result", {state: {tags:name,district:district, }});
 
     }
     const { name, symbol, district } = proms;
@@ -30,7 +30,7 @@ const Tags = (proms) => {
         <>
             <div className="tag-container" id={`tag ${name}`} onClick={handleChangeFilter}>
                 <div className="tag-icon">
-                    <img src={symbol}/>
+                    <img src={symbol} alt='icon'/>
                 </div>
                 <div className="tag-title">{name}</div>
             </div>
