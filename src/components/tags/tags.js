@@ -1,13 +1,27 @@
 import React from "react";
 import './tags.css'
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 
 const Tags = (proms) => {
 
+    // const [dishData, setDishData] = React.useState(null)
+
+    // const fetchDish = async ()=>{
+    //     const res = await axios.get('http://localhost:6060/api/dish/search')
+        
+    //     // console.log( await res)
+    //     setDishData(res.data.data)
+    //     // return res
+    // }
+    // fetchDish()
+    // console.log(dishData);
+
     const navigate = useNavigate();
-    const handleChangeFilter = ()=>{
-        navigate("/result", {state: {type:name,district:district }});
+    const handleChangeFilter = async()=>{
+        // await fetchDish()
+        navigate("/result", {state: {type:name,district:district, }});
 
     }
     const { name, symbol, district } = proms;

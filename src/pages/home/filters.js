@@ -3,6 +3,7 @@ import './filter.css'
 import Tags from "../../components/tags/tags";
 import { useLocation, useNavigate } from "react-router-dom";
 
+
 const Filter = () => {
 
     const tags = [
@@ -21,6 +22,10 @@ const Filter = () => {
 
     ]
 
+
+
+
+
     const navigate = useNavigate()
     const handleClickHome =()=>{
         navigate("/")
@@ -30,7 +35,7 @@ const Filter = () => {
     }
     const location = useLocation();
 
-    console.log(location.state)
+    // console.log(location.state)
     const renderTags = () => {
         return (
             <>
