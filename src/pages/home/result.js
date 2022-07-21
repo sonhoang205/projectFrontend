@@ -27,7 +27,28 @@ const Result = () => {
     const handleClickSignIn = () => {
         navigate("/login")
     }
+    const renderResultCard = () => {
 
+
+        if (dishData !== '') {
+            return (
+                <>
+                    <div className="result-card">
+                        <img className="result-img" src={dishData.img}></img>
+                        <div className="result-name">{dishData.name}</div>
+                        <div className="result-address">{dishData.address}</div>
+                    </div>
+                </>
+            )
+        }
+        return (
+            <>
+                <div className="result-card">
+                    <div className="result-name">Không có dữ liệu</div>
+                </div>
+            </>
+        )
+    }
 
     // const location = useLocation();
     // console.log(location.state)
@@ -57,11 +78,7 @@ const Result = () => {
                 </div>
             </div>
             <div className="result-container">
-                <div className="result-card">
-                    <img className="result-img" src={dishData.img}></img>
-                    <div className="result-name">{dishData.name}</div>
-                    <div className="result-address">{dishData.address}</div>
-                </div>
+                {renderResultCard()}
             </div>
 
         </div>
