@@ -65,7 +65,7 @@ html, body{
     border: 0;
     border-radius:5px ;
 }
-.result-sign-in,.result-sign-up,.result-random, .result-title:hover{
+.result-sign-in,.result-sign-up,.result-other-dish:hover{
     cursor: pointer;
 }
 .result-note{
@@ -114,5 +114,15 @@ html, body{
     padding: 15px;
     font-size: 20px;
     word-wrap: normal;
+}
+.result-other-dish{
+    height: 35px;
+    width: 100px;
+    font-size: 15px;
+    background-color: rgb(58, 163, 255);
+    border: 0;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
 }
 

@@ -26,7 +26,9 @@ const Result = () => {
     React.useEffect(() => {
         fetchDish()
     }, [])
-
+    const handleChangeOtherDish = ()=>{
+        fetchDish()
+    }
     const navigate = useNavigate()
     const handleClickHome = () => {
         navigate("/")
@@ -40,7 +42,7 @@ const Result = () => {
             return (
                 <>
                     <div className="result-card">
-                        <div className="result-name">Không có dữ liệu</div>
+                        <div className="result-name result-undefine">Hiện tại, không có dữ liệu</div>
                     </div>
                 </>
             )
@@ -52,6 +54,7 @@ const Result = () => {
                         <img className="result-img" src={dishData.img} alt='Mon an'></img>
                         <div className="result-name">{dishData.name}</div>
                         <div className="result-address">{dishData.address}</div>
+                        <button className="result-other-dish" onClick={handleChangeOtherDish}>Món Khác</button>
                     </div>
                 </>
             )

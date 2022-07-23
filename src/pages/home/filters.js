@@ -1,7 +1,8 @@
 import React from "react";
 import './filter.css'
 import Tags from "../../components/tags/tags";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import Header from "../../components/header/header";
 
 
 const Filter = () => {
@@ -22,17 +23,6 @@ const Filter = () => {
 
     ]
 
-
-
-
-
-    const navigate = useNavigate()
-    const handleClickHome =()=>{
-        navigate("/")
-    }
-    const handleClickSignIn =()=>{
-        navigate("/login")
-    }
     const location = useLocation();
 
     // console.log(location.state)
@@ -50,27 +40,8 @@ const Filter = () => {
     }
     return (
         <div className="filter-document">
-            {/* <header className="header" style={{
-            position: "fixed",
-            width:'100%',
-            zIndex:'10'
-        }}>
-            <DenseAppBar/>
-        </header> */}
-            <div className="filter-header">
-                <div className="filter-navbar">
-                    <div className="filter-title" onClick={handleClickHome}>
-                        Hôm Nay Ăn Gì?
-                    </div>
-                    <div className="filter-authentication">
-                        <button className="filter-sign-up">Sign Up</button>
-                        <button className="filter-sign-in"onClick={handleClickSignIn}>Sign In</button>
-                    </div>
-                </div>
-                <div className="filter-note">
-                    Chọn Loại Món Ăn
-                </div>
-            </div>
+            <Header title='Chọn loại món ăn'/>
+            
             <div className="filter-container">
                 {renderTags()}
             </div>

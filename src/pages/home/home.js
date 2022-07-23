@@ -3,6 +3,7 @@ import District from "../../components/district/district";
 import './home.css'
 import { useNavigate } from "react-router-dom";
 
+
 const Home = () => {
 
     const districtData = [

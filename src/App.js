@@ -9,6 +9,8 @@ import {
   // Link
 } from "react-router-dom";
 import Result from './pages/home/result';
+import Admin from './pages/admin/admin';
+import Create from './pages/admin/create/create';
 
 
 function App() {
@@ -17,13 +19,6 @@ function App() {
 
   return (
     <Router>
-    {/* <div className="App">
-      {/* <SignIn/> */}
-
-      {/* <Home/> */}
-
-
-    {/* </div> */} 
     <div>
         {/* <nav>
           <ul>
@@ -41,6 +36,11 @@ function App() {
           <Route path="/login" element={<SignIn/>}/>
           <Route path="/district" element={<Filter/>}></Route>
           <Route path="/result" element={<Result/>}></Route>
+          <Route path="/admin" element={<Admin/>}></Route>
+          <Route path="/create" element={<Create/>}></Route>
+          <Route path="/read" element={<Admin/>}></Route>
+          <Route path="/update" element={<Admin/>}></Route>
+          <Route path="/delete" element={<Admin/>}></Route>
         </Routes>
       </div>
     </Router>

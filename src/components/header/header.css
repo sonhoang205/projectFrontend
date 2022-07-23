@@ -1,31 +1,11 @@
-.filter-container{
-    display: flex;
-    flex-direction: row;
-    font-family: Arial, Helvetica, sans-serif;
-    height: 50%;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-}
-html, body{
-    height: 100%;
-    margin: 0;
-}
-.filter-header{
+.header{
     display: flex;
     width: 100%;
     flex-direction: column;
     align-items: center;
     height: 100px;
 }
-.filter-document{
-    height: 100%;
-    margin: 0;
-}
-.filter-home-district{
-    margin-left: 20px;
-}
-.filter-navbar{
+.navbar{
     display: flex;
     width: 100%;
     flex-direction: row;
@@ -34,18 +14,18 @@ html, body{
     height: 70px;
     background-color: white;
 }
-.filter-title{
+.title{
     font-size: 25px;
     font-weight: 600;
     margin-left: 50px;
 }
-.filter-authentication{
+.authentication{
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: 50px;
 }
-.filter-sign-in{
+.sign-in{
     width: 70px;
     height: 40px;
     background-color: rgb(58, 163, 255);
@@ -56,7 +36,7 @@ html, body{
     color: white;
     margin-left: 30px;
 }
-.filter-sign-up{
+.sign-up{
     width: 70px;
     height: 40px;
     font-size: 15px;
@@ -64,10 +44,10 @@ html, body{
     border: 0;
     border-radius:5px ;
 }
-.filter-sign-in,.filter-sign-up,.filter-random, .filter-title:hover{
+.sign-in,.sign-up,.random, .title:hover{
     cursor: pointer;
 }
-.filter-note{
+.note{
     height: 60px;
     width: 100%;
     display: flex;
@@ -76,21 +56,4 @@ html, body{
     font-size: 20px;
     color: rgb(255, 255, 255);
     background-color: rgb(212, 74, 74);
-    border: 1rem;
-}
-.filter-btn{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-.filter-random{
-    width: 90px;
-    height: 40px;
-    background-color: rgb(58, 163, 255);
-    font-size: 15px;
-    font-weight: 600;
-    border: 0;
-    border-radius:5px ;
-    color: white;
-    /* margin-left: 30px; */
 }
