@@ -26,7 +26,7 @@ const ValidationTextField = styled(TextField)({
 
 export default function CustomizedInputs(proms) {
 
-    const { title } = proms;
+    const { title, onChange, defaultValue } = proms;
 
     return (
         <Box
@@ -44,7 +44,8 @@ export default function CustomizedInputs(proms) {
                 required
                 variant="outlined"
                 id="validation-outlined-input"
-
+                onChange={onChange}
+                defaultValue={defaultValue}
             />
         </Box>
     );

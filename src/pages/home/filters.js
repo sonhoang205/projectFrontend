@@ -18,7 +18,7 @@ const Filter = () => {
         },
         {
             type:'Món Chay',
-            icon: 'https://cdn-icons.flaticon.com/png/512/1617/premium/1617578.png?token=exp=1658259980~hmac=96bf41d41c1713b382caceb76ab23cca' 
+            icon: 'https://cdn-icons.flaticon.com/png/512/2153/premium/2153788.png?token=exp=1658687661~hmac=ecd7b6c25a75a50f5108171b323cdb0d' 
         }
 
     ]

@@ -57,3 +57,32 @@
     color: rgb(255, 255, 255);
     background-color: rgb(212, 74, 74);
 }
+.logout{
+    height: 40px;
+    width: 90px;
+    font-size: 15px;
+    background-color: rgb(58, 163, 255);
+    border: 0;
+    border-radius: 7px;
+    color: white;
+    font-weight: 600;
+    border: 2px solid white;
+    margin-left: 30px;
+}
+.logout:hover{
+    cursor: pointer;
+    background-color: rgb(58, 151, 233);
+}
+.user{
+    display: flex;
+    width: 120px;
+    height: 40px;
+    border-right: 2px solid rgba(171, 169, 169, 0.464);
+    justify-content: center;
+    align-items: center;
+}
+p{
+    font-size: 20px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.667);
+}

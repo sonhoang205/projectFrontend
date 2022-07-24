@@ -1,0 +1,39 @@
+.update-document{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+}
+.update-container{
+    display: flex;
+    flex-direction: column;
+    margin-top:80px ;
+    justify-content: center;
+    align-items: center;
+}
+.update-input{
+    margin-top: 30px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.css-z41f3n{
+    display: flex;
+}
+.update-submit-btn{
+    height: 40px;
+    width: 90px;
+    font-size: 15px;
+    background-color: rgb(58, 163, 255);
+    border: 0;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+    margin-top: 30px;
+}
+.update-submit-btn:hover{
+    cursor: pointer;
+}

@@ -11,6 +11,8 @@ import {
 import Result from './pages/home/result';
 import Admin from './pages/admin/admin';
 import Create from './pages/admin/create/create';
+import Update from './pages/admin/update/update';
+
 
 
 function App() {
@@ -38,9 +40,8 @@ function App() {
           <Route path="/result" element={<Result/>}></Route>
           <Route path="/admin" element={<Admin/>}></Route>
           <Route path="/create" element={<Create/>}></Route>
-          <Route path="/read" element={<Admin/>}></Route>
-          <Route path="/update" element={<Admin/>}></Route>
-          <Route path="/delete" element={<Admin/>}></Route>
+          <Route path="/update" element={<Update/>}></Route>
+
         </Routes>
       </div>
     </Router>

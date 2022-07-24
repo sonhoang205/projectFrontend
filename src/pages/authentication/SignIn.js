@@ -43,9 +43,9 @@ export default function SignIn() {
             console.log(res.data.data.token);
             localStorage.setItem(
                 'token', res.data.data.token
-            )
+                )
+                navigate("/admin")
         })
-        navigate("/")
 
     }
 
@@ -60,7 +60,7 @@ export default function SignIn() {
 
 
         console.log({
-            email: data.get('email'),
+            username: data.get('username'),
             password: data.get('password'),
         });
     };

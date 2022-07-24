@@ -68,13 +68,6 @@ const Home = () => {
     
     return (
         <div className="homeDocument">
-            {/* <header className="header" style={{
-            position: "fixed",
-            width:'100%',
-            zIndex:'10'
-        }}>
-            <DenseAppBar/>
-        </header> */}
             <div className="homeHeader">
                 <div className="homeNavbar">
                     <div className="homeTitle" onClick={handleClickHome}>

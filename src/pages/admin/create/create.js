@@ -2,39 +2,32 @@ import React from "react";
 import Header from "../../../components/header/header";
 import CustomizedInputs from "../../../components/input/input";
 import axios from "axios";
-// import { Form } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 import './create.css';
 
 const Create = () => {
-
+    const navigate = useNavigate()
     const [name, setName] = React.useState({ value: '' })
     const [address, setAddress] = React.useState({ value: '' })
     const [tag, setTag] = React.useState({ value: '' })
     const [image, setImage] = React.useState({ value: '' })
     const [district, setDistrict] = React.useState({ value: '' })
 
-    const submit = () => {
-        try {
+    const submit = async () => {
 
-            axios.post('http://localhost:6060/api/dish/create', {
-                name: name.value,
-                address: address.value,
-                district: district.value,
-                img: image.value,
-                tags: tag.value
-            }).then((res) => {
-                console.log(res.data.data);
-            })
-            alert('Success')
-        }
-        catch (err) {
-            console.log(err.message);
-            alert('ERROR')
-        }
+        await axios.post('http://localhost:6060/api/dish/create', {
+            name: name.value,
+            address: address.value,
+            district: district.value,
+            img: image.value,
+            tags: tag.value
+        })
+        // .then((res) => {
+        //     // console.log(res.data.data);
+        // })
+        navigate('/admin')
+
     }
-    console.log(name.value, address.value,tag.value,image.value, district.value);
-
-
 
     return (
         <div className="create-document">
