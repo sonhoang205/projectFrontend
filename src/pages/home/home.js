@@ -10,7 +10,7 @@ const Home = () => {
         {
             name: 'Hoàn Kiếm',
             backgroundColor: "rgb(201, 86, 86)",
-            icon:'https://cdn-icons-png.flaticon.com/512/616/616485.png'
+            icon:'/turtle.png'
         },
         {
             name: 'Hai Bà Trưng',
