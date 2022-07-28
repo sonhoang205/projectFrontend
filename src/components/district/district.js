@@ -17,7 +17,7 @@ const District = (props) => {
 
     return (
         <div className="districtContainer" onClick={handleChangeDistrict}>
-            <div className="districtIcon" style={{ backgroundColor: 'rgba(95, 95, 95, 0.528)', color: color }}>
+            <div className="districtIcon" style={{ backgroundColor: 'rgba(250, 119, 117, 0.528)', color: color }}>
                 <img src={symbol} alt='icon'/>
             </div>
             <div className="districtTitle">{name}</div>

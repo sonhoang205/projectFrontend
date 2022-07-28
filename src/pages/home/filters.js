@@ -10,15 +10,15 @@ const Filter = () => {
     const tags = [
         {
             type:'Món Khô',
-            icon: 'https://cdn-icons-png.flaticon.com/512/4646/4646375.png'
+            icon: '/dry.png'
         },
         {
             type:'Món Nước',
-            icon: 'https://cdn-icons-png.flaticon.com/512/1027/1027308.png'
+            icon: '/splash.png'
         },
         {
             type:'Món Chay',
-            icon: 'https://cdn-icons.flaticon.com/png/512/2153/premium/2153788.png?token=exp=1658687661~hmac=ecd7b6c25a75a50f5108171b323cdb0d' 
+            icon: '/vegetables.png' 
         }
 
     ]

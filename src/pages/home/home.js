@@ -15,43 +15,43 @@ const Home = () => {
         {
             name: 'Hai Bà Trưng',
             backgroundColor: "rgb(183, 83, 95)",
-            icon:'https://cdn-icons.flaticon.com/png/512/1063/premium/1063451.png?token=exp=1658807778~hmac=6ed4f0c0ab3e4a6466dde59772d39cd8'
+            icon:'/elephant.png'
         },
         {
             name: 'Hoàng Mai',
             backgroundColor: "rgb(164, 79, 104)",
-            icon:'https://cdn-icons-png.flaticon.com/512/1684/1684121.png'
+            icon:'/apricot.png'
         },
         {
             name: 'Tây Hồ',
             backgroundColor: "rgb(145, 75, 113)",
-            icon:'https://cdn-icons.flaticon.com/png/512/2046/premium/2046235.png?token=exp=1658807957~hmac=cd317e9f6797fe2e14ab42823b2290bb'
+            icon:'/lake.png'
         },
         {
             name: 'Cầu Giấy',
             backgroundColor: "rgb(126, 71, 122)",
-            icon:'https://cdn-icons.flaticon.com/png/512/4480/premium/4480852.png?token=exp=1658808080~hmac=436737f7b0b79f650b110a17fbf3dffe',
+            icon:'/canals.png',
             
         },
         {
             name: 'Hà Đông',
             backgroundColor: "rgb(108, 68, 131)",
-            icon:'https://cdn-icons-png.flaticon.com/512/3095/3095141.png',
+            icon:'/river.png',
         },
         {
             name: 'Thanh Xuân',
             backgroundColor: "rgb(89, 64, 140)",
-            icon:'https://cdn-icons.flaticon.com/png/512/4533/premium/4533930.png?token=exp=1658808162~hmac=594a156547899bb73a0af2ef57dad566'
+            icon:'/children.png'
         },
         {
             name: 'Đống Đa',
             backgroundColor: "rgb(70, 60, 149)",
-            icon:'https://cdn-icons-png.flaticon.com/512/6527/6527720.png'
+            icon:'/temple.png'
         },
         {
             name: 'Ba Đình',
             backgroundColor: "rgb(51, 56, 157)",
-            icon:'https://cdn-icons-png.flaticon.com/512/1752/1752289.png'
+            icon:'/badinh.png'
         },
     ]
     // route 
