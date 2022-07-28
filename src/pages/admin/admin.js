@@ -27,18 +27,44 @@ const Admin = () => {
         status: 'idle',
         data: null
     })
+    const fetchAllDishes = async () => {
+        try {
+            setDishData(prestate => ({
+                ...prestate,
+                status: 'loading'
+            }))
 
+            const res = await instance.get(`https://project-web-mindx.herokuapp.com/api/dish`,
+            );
+            // console.log(res.data.success);
+
+            if (res.data.success === 1) {
+                setDishData({
+                    status: 'success',
+                    data: {
+                        dishes: res.data.data,
+                        total: res.data.data.total
+                    }
+                })
+                // console.log(dishData.data);
+            } else {
+                setDishData({ status: 'error' })
+            }
+        } catch (error) {
+            setDishData({ status: 'error' })
+        }
+    }
 
 
     const deleteDish = async (dishId) => {
         try {
-            await instance.delete(`http://https://project-web-mindx.herokuapp.com/api/dish/${dishId}`)
+            await instance.delete(`https://project-web-mindx.herokuapp.com/api/dish/${dishId}`)
             Swal.fire(
                 'Success!',
                 'Data has been deleted!',
                 'success'
             )
-            window.location.reload()
+            fetchAllDishes()
         } catch (err) {
             console.log(err);
             Swal.fire({
@@ -87,18 +113,6 @@ const Admin = () => {
         checkToken();
     }, [])
 
-    // const renderAdminFunction = () => {
-    //     return (
-    //         <>
-    //             {functions.map((data) => {
-    //                 // console.log(data.icon);
-    //                 return (
-    //                     <AdminFunction name={data.title} key={data.title} symbol={data.icon} path={data.path} />
-    //                 )
-    //             })}
-    //         </>
-    //     )
-    // }
     const [user, setUser] = React.useState(null)
 
 
