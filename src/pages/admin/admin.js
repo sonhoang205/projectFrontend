@@ -9,7 +9,7 @@ import Swal from "sweetalert2";
 
 const Admin = () => {
     const instance = axios.create({
-        baseURL: 'http://localhost:6060/',
+        baseURL: 'https://project-web-mindx.herokuapp.com/',
         timeout: 300000,
         headers: {
             'Content-Type': 'application/json',
@@ -29,56 +29,61 @@ const Admin = () => {
     })
 
 
-    const fetchDishes = async () => {
-        try {
-            setDishData(prestate => ({
-                ...prestate,
-                status: 'loading'
-            }))
 
-            const res = await instance.get(`http://localhost:6060/api/dish`,
-            );
-            // console.log(res.data.success);
-
-            if (res.data.success === 1) {
-                setDishData({
-                    status: 'success',
-                    data: {
-                        dishes: res.data.data,
-                        total: res.data.data.total
-                    }
-                })
-                // console.log(dishData.data);
-            } else {
-                setDishData({ status: 'error' })
-            }
-        } catch (error) {
-            setDishData({ status: 'error' })
-        }
-    }
     const deleteDish = async (dishId) => {
         try {
-            await instance.delete(`http://localhost:6060/api/dish/${dishId}`)
+            await instance.delete(`http://https://project-web-mindx.herokuapp.com/api/dish/${dishId}`)
             Swal.fire(
                 'Success!',
                 'Data has been deleted!',
                 'success'
-              )
-            fetchDishes()
+            )
+            window.location.reload()
         } catch (err) {
             console.log(err);
             Swal.fire({
                 icon: 'error',
                 title: 'Oops...',
                 text: err,
-              })
+            })
         }
     }
     // console.log(dishData.data);
 
 
     React.useEffect(() => {
+        const fetchDishes = async () => {
+            try {
+                setDishData(prestate => ({
+                    ...prestate,
+                    status: 'loading'
+                }))
+
+                const res = await instance.get(`https://project-web-mindx.herokuapp.com/api/dish`,
+                );
+                // console.log(res.data.success);
+
+                if (res.data.success === 1) {
+                    setDishData({
+                        status: 'success',
+                        data: {
+                            dishes: res.data.data,
+                            total: res.data.data.total
+                        }
+                    })
+                    // console.log(dishData.data);
+                } else {
+                    setDishData({ status: 'error' })
+                }
+            } catch (error) {
+                setDishData({ status: 'error' })
+            }
+        }
         fetchDishes();
+        const checkToken = async () => {
+            const res = await axios.get(`https://project-web-mindx.herokuapp.com/api/auth/userInfor`, { headers: { authorization: localStorage.getItem('token') } })
+            setUser(res.data.data)
+        }
         checkToken();
     }, [])
 
@@ -96,10 +101,7 @@ const Admin = () => {
     // }
     const [user, setUser] = React.useState(null)
 
-    const checkToken = async () => {
-        const res = await axios.get(`http://localhost:6060/api/auth/userInfor`, { headers: { authorization: localStorage.getItem('token') } })
-        setUser(res.data.data)
-    }
+
 
     const renderTable = () => {
         // console.log(user);
@@ -194,7 +196,7 @@ const Admin = () => {
         <div className="admin-document">
             <Header title='Trang Admin' />
             <div className="admin-container">
-            {renderTable()}
+                {renderTable()}
             </div>
         </div>
     )
