@@ -5,6 +5,7 @@ import './Admin.css';
 
 import { useNavigate, } from "react-router-dom";
 import axios from "axios";
+import Swal from "sweetalert2";
 
 const Admin = () => {
     const instance = axios.create({
@@ -58,9 +59,19 @@ const Admin = () => {
     const deleteDish = async (dishId) => {
         try {
             await instance.delete(`http://localhost:6060/api/dish/${dishId}`)
+            Swal.fire(
+                'Success!',
+                'Data has been deleted!',
+                'success'
+              )
             fetchDishes()
-        } catch (error) {
-            console.log(error);
+        } catch (err) {
+            console.log(err);
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: err,
+              })
         }
     }
     // console.log(dishData.data);

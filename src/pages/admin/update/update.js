@@ -3,6 +3,7 @@ import Header from "../../../components/header/header";
 import CustomizedInputs from "../../../components/input/input";
 import axios from "axios";
 import { useNavigate, useLocation } from "react-router-dom";
+import Swal from 'sweetalert2'
 // import { Form } from "react-bootstrap";
 import './update.css';
 
@@ -29,6 +30,11 @@ const Update = () => {
         }).then((res) => {
             console.log(res.data.data);
         })
+        Swal.fire(
+            'Success!',
+            'Data has been updated',
+            'success'
+          )
         navigate('/admin');
 
     }

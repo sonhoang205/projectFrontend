@@ -1,5 +1,4 @@
 import * as React from 'react';
-// import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
@@ -8,13 +7,12 @@ import Checkbox from '@mui/material/Checkbox';
 import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-// import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
-
+import Swal from 'sweetalert2';
 function Copyright(props) {
     return (
         <Typography variant="body2" color="text.secondary" align="center" {...props}>
@@ -34,18 +32,31 @@ export default function SignIn() {
     const [username, setUsername] = React.useState({ value: '' })
     const [password, setPassword] = React.useState({ value: '' })
 
+  
     const submit = () => {
-
-        axios.post('http://localhost:6060/api/auth/login', {
-            username: username.value,
-            password: password.value
-        }).then((res) => {
-            console.log(res.data.data.token);
-            localStorage.setItem(
-                'token', res.data.data.token
-                )
-                navigate("/admin")
-        })
+        try {
+            axios.post('http://localhost:6060/api/auth/login', {
+                username: username.value,
+                password: password.value
+            }).then((res) => {
+                console.log(res.data.data.token);
+                localStorage.setItem(
+                    'token', res.data.data.token
+                    )
+                    Swal.fire(
+                        'Logged in!',
+                        'Hello Admin',
+                        'success'
+                      )
+                    navigate("/admin")
+            })
+        } catch (error) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: error,
+              })
+        }   
 
     }
 
