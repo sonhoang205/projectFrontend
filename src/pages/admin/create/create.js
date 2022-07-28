@@ -16,7 +16,7 @@ const Create = () => {
 
     const submit = async () => {
         try {
-            await axios.post('http://localhost:6060/api/dish/create', {
+            await axios.post('https://project-web-mindx.herokuapp.com/api/dish/create', {
                 name: name.value,
                 address: address.value,
                 district: district.value,

@@ -20,22 +20,30 @@ const Update = () => {
 
 
     const submit = async () => {
-
-        await axios.put(`http://localhost:6060/api/dish/${dish._id}`, {
-            name: name.value,
-            address: address.value,
-            district: district.value,
-            img: image.value,
-            tags: tag.value
-        }).then((res) => {
-            console.log(res.data.data);
-        })
-        Swal.fire(
-            'Success!',
-            'Data has been updated',
-            'success'
-          )
-        navigate('/admin');
+        try {
+            await axios.put(`https://project-web-mindx.herokuapp.com/api/dish/${dish._id}`, {
+                name: name.value,
+                address: address.value,
+                district: district.value,
+                img: image.value,
+                tags: tag.value
+            }).then((res) => {
+                console.log(res.data.data);
+            })
+            Swal.fire(
+                'Success!',
+                'Data has been updated',
+                'success'
+              )
+            navigate('/admin');
+            
+        } catch (error) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: error,
+              })
+        }
 
     }
     console.log(name.value, address.value, district.value);

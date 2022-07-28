@@ -10,7 +10,7 @@ const Result = () => {
     console.log(location.state)
 
     const fetchDish = async () => {
-        const res = await axios.get('http://localhost:6060/api/dish/search',{
+        const res = await axios.get('https://project-web-mindx.herokuapp.com/api/dish/search',{
             params:{
                 district: location.state.district,
                 tags: location.state.tags

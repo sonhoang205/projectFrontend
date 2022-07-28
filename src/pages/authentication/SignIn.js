@@ -35,7 +35,7 @@ export default function SignIn() {
   
     const submit = () => {
         try {
-            axios.post('http://localhost:6060/api/auth/login', {
+            axios.post('https://project-web-mindx.herokuapp.com/api/auth/login', {
                 username: username.value,
                 password: password.value
             }).then((res) => {
