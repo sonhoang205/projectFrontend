@@ -180,8 +180,8 @@ const Admin = () => {
                                 </div>
                             </td>
                             <td>
-                                <img className="admin-delete-btn" onClick={() => { deleteDish(dish._id) }} src="https://cdn-icons.flaticon.com/png/512/3687/premium/3687412.png?token=exp=1658684214~hmac=d2124286469f89e1400ad0aa4d090e44" alt="delete button" />
-                                <img className="admin-update-btn" onClick={() => { navigate('/update', { state: { dish: dish } }) }} src="https://cdn-icons-png.flaticon.com/512/724/724834.png" alt="update button" />
+                                <img className="admin-delete-btn" onClick={() => { deleteDish(dish._id) }} src="/delete.png" alt="delete button" />
+                                <img className="admin-update-btn" onClick={() => { navigate('/update', { state: { dish: dish } }) }} src="refresh.png" alt="update button" />
                             </td>
                         </tr>
                     )

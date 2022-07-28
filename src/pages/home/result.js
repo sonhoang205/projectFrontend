@@ -2,7 +2,8 @@ import React from "react";
 import './result.css'
 import axios from "axios";
 
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation,  } from "react-router-dom";
+import Header from "../../components/header/header";
 
 const Result = () => {
     const [dishData, setDishData] = React.useState('')
@@ -28,13 +29,6 @@ const Result = () => {
     }, [])
     const handleChangeOtherDish = ()=>{
         fetchDish()
-    }
-    const navigate = useNavigate()
-    const handleClickHome = () => {
-        navigate("/")
-    }
-    const handleClickSignIn = () => {
-        navigate("/login")
     }
     const renderResultCard = () => {
 
@@ -73,27 +67,7 @@ const Result = () => {
 
     return (
         <div className="result-document">
-            {/* <header className="header" style={{
-            position: "fixed",
-            width:'100%',
-            zIndex:'10'
-        }}>
-            <DenseAppBar/>
-        </header> */}
-            <div className="result-header">
-                <div className="result-navbar">
-                    <div className="result-title" onClick={handleClickHome}>
-                        Hôm Nay Ăn Gì?
-                    </div>
-                    <div className="result-authentication">
-                        <button className="result-sign-up">Sign Up</button>
-                        <button className="result-sign-in" onClick={handleClickSignIn}>Sign In</button>
-                    </div>
-                </div>
-                <div className="result-note">
-                    Kết Quả
-                </div>
-            </div>
+            <Header title="Kết Quả"/>
             <div className="result-container">
                 {renderResultCard()}
             </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import District from "../../components/district/district";
 import './home.css'
-import { useNavigate } from "react-router-dom";
+import Header from "../../components/header/header";
 
 
 const Home = () => {
@@ -54,16 +54,7 @@ const Home = () => {
             icon:'/badinh.png'
         },
     ]
-    // route 
-    
-    const navigate = useNavigate();
-    const handleClickSignIn =()=>{
-        navigate("/login")
-    }
-    const handleClickHome =()=>{
-        navigate("/")
-    }
-    
+
     const renderDistrict = () => {
         return (
             <>
@@ -78,20 +69,7 @@ const Home = () => {
     
     return (
         <div className="homeDocument">
-            <div className="homeHeader">
-                <div className="homeNavbar">
-                    <div className="homeTitle" onClick={handleClickHome}>
-                        Hôm Nay Ăn Gì?
-                    </div>
-                    <div className="homeAuthentication">
-                        <button className="homeSignUp">Sign Up</button>
-                        <button className="homeSignIn" onClick={handleClickSignIn}>Sign In</button>
-                    </div>
-                </div>
-                <div className="homeNote">
-                    Chọn một nơi bạn muốn đi
-                </div>
-            </div>
+            <Header title='Chọn Nơi Bạn Muốn Đi'/>
             <div className="homeContainer">
                 {renderDistrict()}
             </div>

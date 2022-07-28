@@ -16,7 +16,7 @@ const Authentication = () => {
     if (!token) {
         return (
             <div className="authentication">
-                <button className="sign-up">Sign Up</button>
+                {/* <button className="sign-up">Sign Up</button> */}
                 <button className="sign-in" onClick={handleClickSignIn}>Sign In</button>
             </div>
         )
