@@ -2,7 +2,7 @@ import React from "react";
 import './result.css'
 import axios from "axios";
 
-import { useLocation,  } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import Header from "../../components/header/header";
 
 const Result = () => {
@@ -30,6 +30,15 @@ const Result = () => {
     const handleChangeOtherDish = ()=>{
         fetchDish()
     }
+    const navigate = useNavigate()
+    const checkUndefined = ()=>{
+        if(location.state === undefined ||location.state === null){
+            navigate('/')
+        }
+    }
+    React.useEffect(()=>{
+        checkUndefined()
+    },[])
     const renderResultCard = () => {
 
         if(dishData === undefined){

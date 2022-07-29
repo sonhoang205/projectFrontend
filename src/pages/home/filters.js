@@ -1,7 +1,7 @@
 import React from "react";
 import './filter.css'
 import Tags from "../../components/tags/tags";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import Header from "../../components/header/header";
 
 
@@ -22,9 +22,16 @@ const Filter = () => {
         }
 
     ]
-
+    const navigate = useNavigate()
     const location = useLocation();
-
+    const checkUndefined = ()=>{
+        if(location.state === undefined ||location.state === null){
+            navigate('/')
+        }
+    }
+    React.useEffect(()=>{
+        checkUndefined()
+    },[])
     // console.log(location.state)
     const renderTags = () => {
         return (
