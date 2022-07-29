@@ -13,6 +13,9 @@ const Authentication = () => {
         localStorage.removeItem('token')
         window.location.reload()
     }
+    const handleClickAdmin =()=>{
+        navigate('/admin')
+    }
     if (!token) {
         return (
             <div className="authentication">
@@ -24,7 +27,7 @@ const Authentication = () => {
     } else {
         return (
             <div className="authentication">
-                <div className="user">
+                <div className="user" onClick={handleClickAdmin}>
                 <p>Admin</p>
                 </div>
                 <button className="logout" onClick={logout}>Log Out</button>

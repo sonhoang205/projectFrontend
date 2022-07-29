@@ -81,6 +81,9 @@
     justify-content: center;
     align-items: center;
 }
+.user:hover{
+    cursor: pointer;
+}
 p{
     font-size: 20px;
     font-weight: 400;
