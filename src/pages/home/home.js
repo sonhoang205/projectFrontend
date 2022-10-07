@@ -69,7 +69,7 @@ const Home = () => {
     
     return (
         <div className="homeDocument">
-            <Header title='Chọn Nơi Bạn Muốn Đi'/>
+            <Header title='Long Ngu'/>
             <div className="homeContainer">
                 {renderDistrict()}
             </div>
